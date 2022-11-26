@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Iphone 8",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2019/03/Apple-iPhone-8-Plus-Gold.jpg",
+        "location": "Dhaka",
+        "category": "Iphone",
+        "price": 200,
+        "year": 3,
+        "original-price": 300,
+        "time": "2 November, 2022"
+    },
+    {
+        "name": "Iphone 13",
+        "img": "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664009491/Croma%20Assets/Communication/Mobiles/Images/243460_0_n90peu.png/mxw_640,f_auto",
+        "location": "Dhaka",
+        "category": "Iphone",
+        "price": 500,
+        "year": 1,
+        "original-price": 900,
+        "time": "5 November, 2022"
+    },
+    {
+        "name": "Iphone 14 pro max",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNQoCP-XYXSKJjnaqivUxizXO9Enl_yqu2pA&usqp=CAU",
+        "location": "Cumilla",
+        "category": "Iphone",
+        "price": 800,
+        "year": 1,
+        "original-price": 1300,
+        "time": "6 November, 2022"
+    },
+    {
+        "name": "Samsung s21 ultra",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNQoCP-XYXSKJjnaqivUxizXO9Enl_yqu2pA&usqp=CAU",
+        "location": "Bogura",
+        "category": "Samsung",
+        "price": 900,
+        "year": 1.5,
+        "original-price": 1200,
+        "time": "7 November, 2022"
+    },
+    {
+        "name": "Samsung m21",
+        "img": "https://mobilefactbd.com/wp-content/uploads/2020/03/Samsung-Galaxy-M21.jpg",
+        "location": "Rajshahi",
+        "category": "Samsung",
+        "price": 200,
+        "year": 2,
+        "original-price": 300,
+        "time": "8 November, 2022"
+    },
+    {
+        "name": "Samsung A52",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP189CdXVgyDH0GZ82mjOEiNZgHIbVSvee2A&usqp=CAU",
+        "location": "Rangpur",
+        "category": "Samsung",
+        "price": 300,
+        "year": 1.5,
+        "original-price": 500,
+        "time": "10 November, 2022"
+    },
+    {
+        "name": "xiaomi note 10",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2zJjoykHNlwoCQtZmzWPY7Q6cysKDF5-Aw&usqp=CAU",
+        "location": "Natore",
+        "category": "Xiaomi",
+        "price": 150,
+        "year": 1.5,
+        "original-price": 200,
+        "time": "12 November, 2022"
+    },
+    {
+        "name": "Xiaomi Poco X3",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaSW1V4NM7PTRYf8Q7T0B6F4otTRFuSB37O4fzXGiQSGjsah4ZeTwdkVpDEqbmb7arn7M&usqp=CAU",
+        "location": "Rangpur",
+        "category": "Xiaomi",
+        "price": 200,
+        "year": 2,
+        "original-price": 400,
+        "time": "14 November, 2022"
+    },
+    {
+        "name": "Xiaomi mi 11 pro",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnwviev3hhFVt4DsHxDSM0DJ-BD3COYKsm3g&usqp=CAU",
+        "location": "Rangpur",
+        "category": "Xiaomi",
+        "price": 120,
+        "year": 2,
+        "original-price": 200,
+        "time": "16 November, 2022"
+    }
+]

@@ -15,7 +15,21 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 async function run() {
     try {
+        const mobileCollection = client.db('mobile-point').collection('mobile-collection');
 
+
+        app.get('/allMobiles', async (req, res) => {
+            const query = {};
+            const cursor = mobileCollection.find(query);
+            const mobiles = await cursor.toArray();
+            res.send(mobiles);
+        })
+        app.get('/mobiles', async (req, res) => {
+            const query = {};
+            const cursor = mobileCollection.find(query);
+            const mobiles = await cursor.limit(6).toArray();
+            res.send(mobiles);
+        })
     }
     finally {
 
