@@ -37,6 +37,11 @@ async function run() {
             const singleMobile = await mobileCollection.find(query).toArray();
             res.send(singleMobile);
         })
+        app.post('/allMobiles', async (req, res) => {
+            const mobiles = req.body;
+            const result = await mobileCollection.insertOne(mobiles);
+            res.send(result);
+        })
     }
     finally {
 
