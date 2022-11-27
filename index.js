@@ -30,10 +30,11 @@ async function run() {
             const mobiles = await cursor.limit(6).toArray();
             res.send(mobiles);
         })
-        app.get('/allMobiles/:id', async (req, res) => {
-            const id = req.params.id;
-            const query = { _id: ObjectId(id) }
-            const singleMobile = await mobileCollection.findOne(query);
+        app.get('/allMobiles/:category', async (req, res) => {
+            const category = req.params.category;
+            console.log(req.params);
+            const query = { category: category }
+            const singleMobile = await mobileCollection.find(query).toArray();
             res.send(singleMobile);
         })
     }
