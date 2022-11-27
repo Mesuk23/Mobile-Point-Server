@@ -16,9 +16,16 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
     try {
         const mobileCollection = client.db('mobile-point').collection('mobile-collection');
+        const userCollection = client.db('mobile-point').collection('user-collection');
 
 
         app.get('/allMobiles', async (req, res) => {
+            const query = {};
+            const cursor = mobileCollection.find(query);
+            const mobiles = await cursor.toArray();
+            res.send(mobiles);
+        })
+        app.get('/allProducts', async (req, res) => {
             const query = {};
             const cursor = mobileCollection.find(query);
             const mobiles = await cursor.toArray();
@@ -37,9 +44,21 @@ async function run() {
             const singleMobile = await mobileCollection.find(query).toArray();
             res.send(singleMobile);
         })
+        app.get('/allProducts/:email', async (req, res) => {
+            const email = req.params.email;
+            console.log(req.params);
+            const query = { email: email }
+            const singleMobile = await mobileCollection.find(query).toArray();
+            res.send(singleMobile);
+        })
         app.post('/allMobiles', async (req, res) => {
             const mobiles = req.body;
             const result = await mobileCollection.insertOne(mobiles);
+            res.send(result);
+        })
+        app.post('/users', async (req, res) => {
+            const users = req.body;
+            const result = await userCollection.insertOne(users);
             res.send(result);
         })
     }
