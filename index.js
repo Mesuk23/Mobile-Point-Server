@@ -61,6 +61,28 @@ async function run() {
             const result = await userCollection.insertOne(users);
             res.send(result);
         })
+        app.get('/users', async (req, res) => {
+            const query = {};
+            const cursor = userCollection.find(query);
+            const users = await cursor.toArray();
+            res.send(users);
+        })
+        app.get('/users/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email: email }
+            const result = await userCollection.findOne(query);
+            res.send(result);
+        })
+        app.get('/seller', async (req, res) => {
+            const query = { role: 'Seller' };
+            const result = await userCollection.find(query).toArray();
+            res.send(result);
+        })
+        app.get('/user', async (req, res) => {
+            const query = { role: 'User' };
+            const result = await userCollection.find(query).toArray();
+            res.send(result);
+        })
     }
     finally {
 
