@@ -125,8 +125,20 @@ async function run() {
             const result = await userCollection.updateOne(filter, updatedDoc, options);
             res.send(result);
         });
+        app.put('/seller/verify/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: ObjectId(id) }
+            const options = { upsert: true };
+            const updatedDoc = {
+                $set: {
+                    verify: 'yes'
+                }
+            }
+            const result = await userCollection.updateOne(filter, updatedDoc, options);
+            res.send(result);
+        });
         app.get('/seller', async (req, res) => {
-            const query = { $or: [{ role: 'Seller' }, { role: 'admin' }] };
+            const query = { role: 'Seller' };
             const result = await userCollection.find(query).toArray();
             res.send(result);
         })
