@@ -17,6 +17,7 @@ async function run() {
     try {
         const mobileCollection = client.db('mobile-point').collection('mobile-collection');
         const userCollection = client.db('mobile-point').collection('user-collection');
+        const buyerCollection = client.db('mobile-point').collection('buyer-collection');
 
 
 
@@ -55,6 +56,12 @@ async function run() {
             console.log(req.params);
             const query = { category: category }
             const singleMobile = await mobileCollection.find(query).toArray();
+            res.send(singleMobile);
+        })
+        app.get('/allMobiles/myMobile/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) }
+            const singleMobile = await mobileCollection.findOne(query);
             res.send(singleMobile);
         })
         app.get('/allProducts/:email', async (req, res) => {
@@ -157,6 +164,16 @@ async function run() {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
             const result = await userCollection.deleteOne(query);
+            res.send(result);
+        })
+        app.post('/allbuyer', async (req, res) => {
+            const mobiles = req.body;
+            const result = await buyerCollection.insertOne(mobiles);
+            res.send(result);
+        })
+        app.get('/allbuyer', async (req, res) => {
+            const mobiles = req.body;
+            const result = await buyerCollection.find(mobiles).toArray();
             res.send(result);
         })
     }
